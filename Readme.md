@@ -9,12 +9,12 @@ In my college, my teacher gave us a problem to solve. This problem was to find t
 ## Solution:
 
 1) I created a matriz 4x4 to by maze.
-    - "S" - Início.
-    - "." - Podemos andar.
-    - "X" - Parede.
-    - "E" - Saída;
+    - "S" - Starte.
+    - "." - Can move forward.
+    - "X" - Wall.
+    - "E" - Exit;
 2) I used pointers to controll the position and moviment. 
-3) Criei uma função "Moviment", onde contra a direção que o usario quer ir.
+3) Criei uma função "Moviment", onde controla a direção que o usario quer ir.
 4) Um loop while no main, para checar se é um "." ou "X" ou fim do labirinto "X". 
 5) E uma função reset que retorna ao inicio "S" caso encontramos com "X".
 
