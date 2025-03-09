@@ -6,7 +6,7 @@
 char movement(char matriz[][SPACE], int *i, int *j) {
     char ch;
 
-    printf("Digite W(Subir), S(Descer), D(Direita), A(Esquerda): ");
+    printf("Enter W(Up), S(Down), D(Right), A(Left): ");
     ch = getchar();
 
     switch (ch) {
@@ -40,6 +40,7 @@ void restart(int *i, int *j) {
 int main() {
     int x = 0, y = 0;
     int i = 0, j = 0;
+    int passX, passY;
     bool condition = true;
 
     char maze[SPACE][SPACE] = {
@@ -58,15 +59,18 @@ int main() {
 	
     
 	while(condition){
+		passX = x;
+		passY = y;
 		char position = movement(maze, &x, &y);
 	
-	    if (position == '.') {
+	    if (position == '.' || position == 'S') {
 	        printf("Ok! You're on the correct path. %c\n", position);
 	        condition = true;
 	        
 	    } else if(position == 'X') {
 	    	printf("Block!, %c\n", position);
-	    	restart(&x, &y);
+	    	x = passX;
+	    	y = passY;
 	    	condition = true;
 	    	
 		} else if(position == 'E'){
