@@ -73,7 +73,7 @@ int main() {
 	    	y = passY;
 	    	condition = true;
 	    	
-		} else if(position == 'E'){
+		} else if(position == 'E') {
 			printf("Congratulation!! You're leave!\n");
 			return 1;
 		} else {
